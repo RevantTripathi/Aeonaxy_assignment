@@ -71,12 +71,7 @@ img {
 }
 
 
-.login_t {
-    /* margin-top: 3%;
-    padding-right: 3%; */
 
-    /* background-color: bisque; */
-}
 
 .sg {
     color: blue;
@@ -135,9 +130,8 @@ input {
     }
 
     .login_t {
-        /* margin-top: 3%; */
         padding-right: 0px;
-        
+
         width: 100%;
 
 
@@ -170,10 +164,23 @@ input {
         height: 100%;
         display: flex;
         justify-content: left;
+    }
 
+    .login_t {
+        font-size: 12px;
+    }
+
+    button {
+        height: 120%;
+    }
+
+    .cap {
+        margin-top: 7%;
 
     }
 
-
+    .policy p {
+        font-size: 13px;
+    }
 
 }
