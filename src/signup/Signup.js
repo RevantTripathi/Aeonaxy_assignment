@@ -63,7 +63,7 @@ function Signup() {
                     </div>
 
                 </form>
-                <div className='login'>
+                <div className='login_t'>
                     <p>Already a member?<span className='sg'>Sign In</span></p>
                 </div>
             </div>
