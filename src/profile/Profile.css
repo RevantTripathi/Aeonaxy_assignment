@@ -21,13 +21,9 @@
 
 }
 
-.form-section {
-    /* background-color: rebeccapurple; */
-}
 
-.welcome-text {
-    /* background-color: antiquewhite; */
-}
+
+
 
 .gg {
     color: rgb(136, 132, 132);
@@ -35,7 +31,7 @@
 
 .avt-text {
     margin-top: 8%;
-    /* background-color: aquamarine; */
+
 }
 
 .picture-sec {
@@ -108,11 +104,33 @@
         /* background-color: aqua; */
         margin-right: auto;
         margin-left: 0%;
-
     }
 
     .avt {
         width: 150px;
         height: 150px;
+    }
+}
+
+@media only screen and (max-width:370px) {
+    .profile {
+        margin-top: 5%;
+        margin-left: 15%;
+        /* background-color: aqua; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-d {
+        /* background-color: aqua; */
+        margin-right: auto;
+        margin-left: -2px;
+        display: none;
+    }
+
+    .avt {
+        width: 150px;
     }
 }
