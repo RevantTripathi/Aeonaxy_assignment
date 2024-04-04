@@ -2,7 +2,6 @@
     display: flex;
     gap: 4;
     height: 100vh;
-
 }
 
 img {
@@ -11,7 +10,6 @@ img {
 }
 
 .image {
-    background-color: aqua;
     width: 40%;
 }
 
@@ -89,13 +87,14 @@ img {
 }
 
 button {
-    background-color: rgb(221, 89, 111);
+    background-color: rgb(254, 111, 135);
     color: white;
     border: none;
     border-radius: 5px;
     width: 45%;
     height: 160%;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .cap {
