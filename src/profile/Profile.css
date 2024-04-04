@@ -1,6 +1,6 @@
 .profile {
     margin-top: 1%;
-    /* background-color: aqua; */
+
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,22 +8,15 @@
 }
 
 .logo-d {
-    /* background-color: aqua; */
+
     margin-right: auto;
     margin-left: 2%;
-
 }
 
 .logo-d img {
     width: 150px;
     height: 50px;
-
-
 }
-
-
-
-
 
 .gg {
     color: rgb(136, 132, 132);
@@ -46,6 +39,9 @@
     width: 150px;
     height: 150px;
     background-color: rgb(254, 254, 254);
+}
+.avt img{
+    border-radius: 50%;
 }
 
 .bt {
@@ -114,7 +110,7 @@
 
 @media only screen and (max-width:370px) {
     .profile {
-        margin-top: 5%;
+        margin-top: 15%;
         margin-left: 15%;
         /* background-color: aqua; */
         width: 100%;
