@@ -16,7 +16,6 @@ function Profile() {
             <div className='profile'>
                 <div className='logo-d'>
                     <img src={logo}></img>
-
                 </div>
                 <div className='form-section'>
                     <div className='welcome-text'>

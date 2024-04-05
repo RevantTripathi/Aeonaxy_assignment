@@ -8,10 +8,7 @@ function Signup() {
             <div className='image'>
                 <img src={img} />
             </div>
-
             <div className='form-container'>
-
-
                 <form>
                     <div className='title'>
 
@@ -20,11 +17,11 @@ function Signup() {
                     <div className='form-field'>
                         <div className='n'>
                             <label>Name</label>
-                            <input type='text' name='name' placeholder='Name'></input>
+                            <input className='input' type='text' name='name' placeholder='Name'></input>
                         </div>
                         <div className='n'>
                             <label>Username</label>
-                            <input type='text' name='username' placeholder='Username'></input>
+                            <input className='input' type='text' name='username' placeholder='Username'></input>
                         </div>
 
                     </div>
@@ -32,17 +29,16 @@ function Signup() {
                     <div className="form-field">
                         <div className='m'>
                             <label>Email</label>
-                            <input type='email' name='username' placeholder='Username' />
+                            <input className='input' type='email' name='username' placeholder='Username' />
                         </div>
                     </div>
 
                     <div className="form-field">
                         <div className='m'>
                             <label>Password</label>
-                            <input type='password' name='password' placeholder='6+ characters' />
+                            <input className='input' type='password' name='password' placeholder='6+ characters' />
                         </div>
                     </div>
-
 
                     <div className='check'>
                         <div className='box'>
