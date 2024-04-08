@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Signup.css'
 import img from '../assests/Db.jpg'
+import { useNavigate } from "react-router-dom";
 
-function Signup() {
+function Signup({ userData, setUserdata }) {
+    const navigate = useNavigate();
+   
+
+
     return (
         <div className='signup'>
             <div className='image'>
@@ -11,17 +16,22 @@ function Signup() {
             <div className='form-container'>
                 <form>
                     <div className='title'>
-
                         <h1>Sign up to Dribble</h1>
                     </div>
+
                     <div className='form-field'>
                         <div className='n'>
                             <label>Name</label>
-                            <input className='input' type='text' name='name' placeholder='Name'></input>
+                            <input className='input' type='text' name='name' placeholder='Name' value={userData.name} onChange={(e) =>
+                                setUserdata({ ...userData, name: e.target.value })
+                            } />
                         </div>
+
                         <div className='n'>
                             <label>Username</label>
-                            <input className='input' type='text' name='username' placeholder='Username'></input>
+                            <input className='input' type='text' name='username' placeholder='Username' value={userData.username} onChange={(e) =>
+                                setUserdata({ ...userData, username: e.target.value })
+                            } />
                         </div>
 
                     </div>
@@ -29,14 +39,18 @@ function Signup() {
                     <div className="form-field">
                         <div className='m'>
                             <label>Email</label>
-                            <input className='input' type='email' name='username' placeholder='Username' />
+                            <input className='input' type='email' name='email' placeholder='Email' value={userData.email} onChange={(e) =>
+                                setUserdata({ ...userData, email: e.target.value })
+                            } />
                         </div>
                     </div>
 
                     <div className="form-field">
                         <div className='m'>
                             <label>Password</label>
-                            <input className='input' type='password' name='password' placeholder='6+ characters' />
+                            <input className='input' type='password' name='password' placeholder='6+ characters' value={userData.paswword} onChange={(e) =>
+                                setUserdata({ ...userData, password: e.target.value })
+                            } />
                         </div>
                     </div>
 
@@ -50,7 +64,7 @@ function Signup() {
                     </div>
 
                     <div>
-                        <button>Create Account</button>
+                        <button type="submit" onClick={() => navigate('/profile')}>Create Account</button>
                     </div>
                     <div className='cap'>
                         <p>This site is protected by reCAPTCHA and the Google

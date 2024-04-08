@@ -1,20 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Option.css'
 import logo from '../assests/logo.jpg'
 import { IoChevronBackOutline } from "react-icons/io5";
 import img1 from '../assests/ds.jpg'
 import img2 from '../assests/hire.jpg'
 import img3 from '../assests/13827.jpg'
+import { useNavigate } from "react-router-dom";
+// import { useState } from 'react'
 
 
 
 function Option() {
+    const [isChecked, setIsChecked] = useState(false);
+
+    const navigate = useNavigate();
+
+
+    const handleCheckboxChange = () => {
+        setIsChecked(!isChecked);
+    };
+
     return (
         <>
             <div className='option-page'>
 
                 <div className='top' >
-                    <IoChevronBackOutline />
+                    <IoChevronBackOutline onClick={()=>{navigate('/profile')}}/>
                 </div>
                 <div className='center-sec'>
 
@@ -22,28 +33,25 @@ function Option() {
                         <h2>What brings you to Dribble?</h2>
                         <p>Select the option that describes you. Don't worry, you can explore others options later</p>
                     </div>
-                    <div className="selection">
+                    <div className='selection' >
                         <div className='img-sec'>
                             <img className='photo-opt' src={img1} />
-                            <p>I'm designer looking to share my work</p>
-                            <input className='select' type='checkbox' />
+                            <h4>I'm designer looking to share my work</h4>
+                            <input type='checkbox' className='select' />
+
                         </div>
                         <div className='img-sec2'>
                             <img className='photo-opt' src={img2} />
-                            <p>I'm looking to hire a <br />designer</p>
+                            <h4>I'm looking to hire a <br />designer</h4>
                             <input className='select' type='checkbox' />
                         </div>
                         <div className='img-sec'>
                             <img className='photo-opt' src={img3} />
-                            <p>I'm looking for design <br />inspiration</p>
+                            <h4>I'm looking for design <br />inspiration</h4>
                             <input className='select' type='checkbox' />
                         </div>
 
                     </div>
-
-                    {/* <div className='bt'>
-                        <button>Finish</button>
-                    </div> */}
 
                 </div>
                 <div className='lt-text'>
@@ -52,7 +60,7 @@ function Option() {
                 <div className='bt-f'>
                     <button>Finish</button>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

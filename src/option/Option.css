@@ -14,21 +14,19 @@
     margin-left: 3%;
     width: 1%;
     padding: 1.3% 1.5% 1.3% 1.5%;
-    background-color: rgb(180, 185, 185);
+    background-color: rgb(235, 235, 235);
     border-radius: 7px;
 
 }
 
 .center-sec {
-    /* background-color: blue; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
 .head {
-    /* background-color: brown; */
+
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -50,9 +48,10 @@
     margin-top: 2%;
     justify-content: center;
     width: 100%;
-    height: 250px;
+    height: 260px;
 
 }
+
 
 .img-sec {
     width: 230px;
@@ -65,10 +64,32 @@
     text-align: center;
 }
 
+.box-selected {
+    width: 230px;
+    border-radius: 5%;
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+    border: 2px rgb(247, 143, 143) solid;
+    text-align: center;
+}
+
+/* .box-selected2 {
+    width: 230px;
+    border-radius: 5%;
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+    border: 2px rgb(247, 143, 143) solid;
+    text-align: center;
+} */
+
 .select {
     margin-top: 0%;
     width: 20%;
-    height: 50%;
+    height: 40%;
     border-radius: 100%;
 }
 

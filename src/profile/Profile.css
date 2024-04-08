@@ -62,11 +62,11 @@
     padding: 0.5em;
     border: thin solid grey;
     border-radius: 3px;
-
 }
 
 .location-sec input {
     width: 95%;
+    border: none;
     border-bottom: 2px rgb(173, 167, 167) solid;
     background-color: white;
     border-radius: 0%;
