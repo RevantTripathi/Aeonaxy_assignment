@@ -84,6 +84,15 @@
     font-size: 14px;
 }
 
+.back{
+    margin-top: 8%;
+    background-color: aqua;
+    width: 20%;
+    height: 40%;
+    padding: 7%;
+}
+
+
 @media only screen and (max-width:500px) {
 
     .profile {

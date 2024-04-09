@@ -58,7 +58,7 @@ function Option() {
                     <h4>Anything else? You can select multiple</h4>
                 </div>
                 <div className='bt-f'>
-                    <button>Finish</button>
+                    <button onClick={()=>{navigate('/email')}}>Finish</button>
                 </div>
             </div >
         </>

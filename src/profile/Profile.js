@@ -52,13 +52,7 @@ function Profile({ userData, setUserdata }) {
                 console.log("Error in sending data", err)
             }
         )
-        setUserdata({
-            name: "",
-            username: "",
-            email: "",
-            password: "",
-            city: "",
-        })
+        
     }
 
 
@@ -67,10 +61,11 @@ function Profile({ userData, setUserdata }) {
             <div className='profile'>
                 <div className='logo-d'>
                     <img src={logo}></img>
-                </div>
-                <div className='top' >
+                    {/* <div className='back' >
                     <IoChevronBackOutline onClick={() => { navigate('/profile') }} />
+                </div> */}
                 </div>
+                
                 <div className='form-section'>
                     <div className='welcome-text'>
                         <h1>Welcome! Let's create your profile</h1>

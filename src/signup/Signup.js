@@ -1,11 +1,44 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import './Signup.css'
 import img from '../assests/Db.jpg'
 import { useNavigate } from "react-router-dom";
 
 function Signup({ userData, setUserdata }) {
     const navigate = useNavigate();
+
+    const [errors,setErrors]=useState({})
    
+
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+
+        const validationErrors = {}
+
+        if(!userData.name.trim()){
+            validationErrors.name = "name is required"
+        }
+        if(!userData.username.trim()){
+            validationErrors.username = "username is required"
+        }
+        if(!userData.email.trim()){
+            validationErrors.email = "email is required"
+        } else if(!/\S+@\S+\.\S+/.test(userData.email)){
+            validationErrors.email = "email is not valid"
+        }
+
+        if(!userData.password.trim()){
+            validationErrors.password = "password is required"
+        } else if(userData.password.length < 6){
+            validationErrors.password = "password should be at least 6 charcters"
+        }
+
+        setErrors(validationErrors)
+
+        if(Object.keys(validationErrors).length===0){
+            navigate('/profile')
+
+        }
+    }
 
 
     return (
@@ -14,7 +47,7 @@ function Signup({ userData, setUserdata }) {
                 <img src={img} />
             </div>
             <div className='form-container'>
-                <form>
+                <form >
                     <div className='title'>
                         <h1>Sign up to Dribble</h1>
                     </div>
@@ -25,6 +58,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='text' name='name' placeholder='Name' value={userData.name} onChange={(e) =>
                                 setUserdata({ ...userData, name: e.target.value })
                             } />
+                            {errors.name && <span>{errors.name}</span>}
                         </div>
 
                         <div className='n'>
@@ -32,6 +66,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='text' name='username' placeholder='Username' value={userData.username} onChange={(e) =>
                                 setUserdata({ ...userData, username: e.target.value })
                             } />
+                            {errors.username && <span>{errors.username}</span>}
                         </div>
 
                     </div>
@@ -42,6 +77,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='email' name='email' placeholder='Email' value={userData.email} onChange={(e) =>
                                 setUserdata({ ...userData, email: e.target.value })
                             } />
+                            {errors.email && <span>{errors.email}</span>}
                         </div>
                     </div>
 
@@ -51,6 +87,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='password' name='password' placeholder='6+ characters' value={userData.paswword} onChange={(e) =>
                                 setUserdata({ ...userData, password: e.target.value })
                             } />
+                            {errors.password && <span>{errors.password}</span>}
                         </div>
                     </div>
 
@@ -64,7 +101,7 @@ function Signup({ userData, setUserdata }) {
                     </div>
 
                     <div>
-                        <button type="submit" onClick={() => navigate('/profile')}>Create Account</button>
+                        <button type="submit" onClick={handleSubmit}>Create Account</button>
                     </div>
                     <div className='cap'>
                         <p>This site is protected by reCAPTCHA and the Google
