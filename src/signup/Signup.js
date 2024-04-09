@@ -29,7 +29,7 @@ function Signup({ userData, setUserdata }) {
         if(!userData.password.trim()){
             validationErrors.password = "password is required"
         } else if(userData.password.length < 6){
-            validationErrors.password = "password should be at least 6 charcters"
+            validationErrors.password = "password should be at least 6 characters"
         }
 
         setErrors(validationErrors)
@@ -58,7 +58,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='text' name='name' placeholder='Name' value={userData.name} onChange={(e) =>
                                 setUserdata({ ...userData, name: e.target.value })
                             } />
-                            {errors.name && <span>{errors.name}</span>}
+                            <div className='err'>{errors.name && <span>{errors.name}</span>}</div>
                         </div>
 
                         <div className='n'>
@@ -66,7 +66,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='text' name='username' placeholder='Username' value={userData.username} onChange={(e) =>
                                 setUserdata({ ...userData, username: e.target.value })
                             } />
-                            {errors.username && <span>{errors.username}</span>}
+                            <div className="err">{errors.username && <span>{errors.username}</span>}</div>
                         </div>
 
                     </div>
@@ -77,7 +77,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='email' name='email' placeholder='Email' value={userData.email} onChange={(e) =>
                                 setUserdata({ ...userData, email: e.target.value })
                             } />
-                            {errors.email && <span>{errors.email}</span>}
+                            <div className='err'>{errors.email && <span>{errors.email}</span>}</div>
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@ function Signup({ userData, setUserdata }) {
                             <input className='input' type='password' name='password' placeholder='6+ characters' value={userData.paswword} onChange={(e) =>
                                 setUserdata({ ...userData, password: e.target.value })
                             } />
-                            {errors.password && <span>{errors.password}</span>}
+                            <div className='err'>{errors.password && <span>{errors.password}</span>}</div>
                         </div>
                     </div>
 
