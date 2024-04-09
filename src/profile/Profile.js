@@ -26,7 +26,7 @@ function Profile({ userData, setUserdata }) {
 
         // http://localhost:5000/users
 
-        await axios.post("https://aeonaxy-backend.onrender.com", { ...userData }).then(
+        await axios.post("https://aeonaxy-backend.onrender.com/users", { ...userData }).then(
             (res) => {
                 console.log(res);
                 navigate('/option')
